@@ -1,0 +1,41 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    border-bottom: gray;
+}
+
+.navbar-links-items {
+    margin: 0;
+    display: inline-block;
+    padding-right: 25px;
+    padding-left: 25px;
+    color: black;
+    font-size: large;
+}
+
+.navbar-links-items a:link {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar-links-items a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar-links-items a:hover {
+    text-decoration: none;
+}
+
+.navbar-links-items a:active {
+    text-decoration: none;
+}
+
+.icon {
+    margin-right: 25px;
+    margin-left: 25px;
+    width: 30px;
+    height: 30px;
+}
