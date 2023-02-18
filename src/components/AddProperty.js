@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/addproperty.css";
 
 const AddProperty = () => {
   return (
