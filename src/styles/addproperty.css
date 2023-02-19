@@ -1,5 +1,39 @@
+* { min-width: 0; min-height: 0; }
+
 .add-property {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+}
+
+fieldset {
+    display: flex;
+    width: 600px;
+    height: 250px;
+}
+
+.add-property-heading {
     display: flex;
     justify-content: center;
     padding-top:  15px;
 }
+
+
+.forms {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+select {
+    min-width: 200px;
+    min-height: 40px;
+}
+
+input {
+    min-width: 175px;
+    min-height: 33px;
+}
+
