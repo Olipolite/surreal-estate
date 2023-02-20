@@ -9,7 +9,7 @@
 
 fieldset {
     display: flex;
-    width: 600px;
+    width: 700px;
     height: 250px;
 }
 
@@ -24,15 +24,37 @@ fieldset {
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
+    font-size: small;
+    margin-left: 25px;
 }
 
 select {
     min-width: 200px;
-    min-height: 40px;
+    min-height: 37px;
+    margin-left: 10px;
 }
 
 input {
-    min-width: 175px;
-    min-height: 33px;
+    min-width: 190px;
+    min-height: 30px;
+    margin-left: 10px;
 }
 
+.city {
+padding-left: 95px;
+}
+
+.bathroom {
+padding-left: 75px;
+}
+
+.bedroom {
+    padding-left: 75px;
+    margin-left: 5px;
+}
+
+.add-property-button {
+    height: 37px;
+    width: 190px;
+    margin-left: 200px;
+}

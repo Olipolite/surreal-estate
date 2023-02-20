@@ -91,6 +91,17 @@ const AddProperty = () => {
               </select>
             </label>
           </div>
+          <div className="price">
+            <label htmlFor="Price(£)">
+              Price(£)
+              <input
+                id="price"
+                name="price"
+                value={fields.price}
+                onChange={handleFieldChange}
+              />
+            </label>
+          </div>
           <div className="bedroom">
             <label htmlFor="No. of Bedrooms">
               No. of bedrooms
@@ -109,17 +120,6 @@ const AddProperty = () => {
               </select>
             </label>
           </div>
-          <div className="price">
-            <label htmlFor="Price(£)">
-              Price(£)
-              <input
-                id="price"
-                name="price"
-                value={fields.price}
-                onChange={handleFieldChange}
-              />
-            </label>
-          </div>
           <div className="email">
             <form onSubmit={handleAddProperty}>
               <label htmlFor="email">
@@ -131,7 +131,9 @@ const AddProperty = () => {
                   onChange={handleFieldChange}
                 />
               </label>
-              <button type="submit">Submit</button>
+              <button className="add-property-button" type="submit">
+                Submit
+              </button>
             </form>
           </div>
         </div>
