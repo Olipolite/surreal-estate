@@ -11,9 +11,18 @@ describe("Alert", () => {
   });
 
   it("displays a success message", () => {
-    const component = render(<Alert message="Success!!" success />);
-    const alertMessageNode = component.getByText("Success!!");
+    const { getByText, asFragment } = render(
+      <Alert message="Success!!" success />
+    );
 
-    expect(alertMessageNode.textContent).toBe("Success!!");
+    expect(getByText(/Success/).textContent).toBe("Success!!");
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it("does not render an error or a success message if message props is empty", () => {
+    const { asFragment } = render(<Alert message="" />);
+    const alert = asFragment();
+
+    expect(alert).toMatchSnapshot();
   });
 });

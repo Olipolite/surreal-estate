@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Alert from "./Alert";
 import "../styles/addproperty.css";
 
 const AddProperty = () => {
@@ -8,22 +9,36 @@ const AddProperty = () => {
       title: "",
       city: "Manchester",
       type: "Flat",
-      bathrooms: "1",
-      bedrooms: "1",
-      price: "0",
+      bathrooms: 1,
+      bedrooms: 1,
+      price: 0,
       email: "",
+    },
+    alert: {
+      message: "",
+      isSuccess: false,
     },
   };
 
   const [fields, setFields] = useState(initialState.fields);
+  const [alert, setAlert] = useState(initialState.alert);
 
   const handleAddProperty = (event) => {
     event.preventDefault();
+    setAlert({ message: "", isSuccess: false });
     axios
       .post("http://localhost:4000/api/v1/PropertyListing", fields)
       .then((res) => {
+        setAlert({ message: "Property added.", isSuccess: true });
         setFields(initialState.fields);
         console.log(res.data);
+      })
+      .catch((error) => {
+        setAlert({
+          message: "Server error. Please try again later.",
+          isSuccess: false,
+        });
+        console.log(error);
       });
   };
 
@@ -144,6 +159,7 @@ const AddProperty = () => {
           </div>
         </div>
       </fieldset>
+      <Alert message={alert.message} success={alert.isSuccess} />
     </div>
   );
 };
