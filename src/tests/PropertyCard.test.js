@@ -24,7 +24,6 @@ describe("PropertyCard", () => {
         email={validProps.email}
       />
     );
-
     expect(asFragment()).toMatchSnapshot();
   });
 });
