@@ -1,7 +1,30 @@
-.property-card {
+.allt {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    color: black;
+    border: 1px solid black;
+    border-top: 0px;
+    font-size: small;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.icon-card {
+    display: flex;
     justify-content: center;
-    align-items: center;
-    color: aqua;
+    font-size: xx-large;
+    color: rgb(95, 250, 212);
+    padding: 15px 15px 15px 15px;
+    background-color: rgb(201, 201, 201);
+}
+
+.bathrooms {
+}
+
+.email-button {
+    display: flex;
+    background-color: rgb(95, 250, 212);
+    width: auto;
 }
