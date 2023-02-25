@@ -1,12 +1,12 @@
 .allt {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     color: black;
     border: 1px solid black;
     border-top: 0px;
     font-size: small;
     padding-left: 15px;
+    padding-right: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
 }
@@ -16,15 +16,51 @@
     justify-content: center;
     font-size: xx-large;
     color: rgb(95, 250, 212);
-    padding: 15px 15px 15px 15px;
+    padding: 50px 15px 50px 15px;
     background-color: rgb(201, 201, 201);
 }
 
+.icon-email {
+    padding-right: 5px;
+    padding-top: 1px;
+}
+
+.title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.type {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
 .bathrooms {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.bedrooms {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.price {
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 
 .email-button {
-    display: flex;
+    display: block;
+    width: 100%;
+    height: 35px;
     background-color: rgb(95, 250, 212);
-    width: auto;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    cursor: pointer;
+    border: 0;
 }

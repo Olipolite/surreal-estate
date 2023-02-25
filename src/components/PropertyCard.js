@@ -5,6 +5,7 @@ import {
   faBathtub,
   faSterlingSign,
   faHouse,
+  faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 import Proptypes from "prop-types";
 import "../styles/propertycard.css";
@@ -25,23 +26,23 @@ const PropertyCard = ({
       </div>
       <div className="allt">
         <div className="title">{title}4 bedroom terrace</div>
-        <div className="type">{type}terrace house</div>
+        <div className="type">{(city, type)}Manchester - Terrace house</div>
         <div className="bathrooms">
           <FontAwesomeIcon icon={faBathtub} />
-          {bathrooms}
+          {bathrooms} 2
         </div>
         <div className="bedrooms">
           <FontAwesomeIcon icon={faBed} />
-          {bedrooms}
+          {bedrooms} 4
         </div>
         <div className="price">
           <FontAwesomeIcon icon={faSterlingSign} />
-          {price}
+          {price} 100000
         </div>
-        <div className="city">{city}</div>
         <div className="email">
           <button className="email-button" type="submit" onClick={email}>
-            email
+            <FontAwesomeIcon className="icon-email" icon={faEnvelope} />
+            Email
           </button>
         </div>
       </div>
